@@ -1,13 +1,13 @@
 body {
-    background-color :cyan black;
+    background-color :cyan rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
 }
 
 p {
-    color: rgb(0, 222, 230);
-    font-size: 24px;
+    color: rgb(217, 255, 0);
+    font-size:46px;
     
 }
 
