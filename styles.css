@@ -1,13 +1,18 @@
-body {
-    background-color :cyan rgb(0, 0, 0);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-}
-
 p {
-    color: rgb(217, 255, 0);
-    font-size:46px;
-    
-}
-
+    font-family: 'Comfortaa';
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 1px #272625;
+    padding: 13px 6px;
+    box-shadow: 2px 2px 2px #4f4f4f;
+    border-radius: 5px;
+    border: 2px ridge #f3c846;
+    background: #1f4cff;
+    background: linear-gradient(to top, #1f4cff, #fda207);
+  }
+ p:hover {
+    color: #cccccc !important;
+    background: #f66d52;
+    background: linear-gradient(to top, #f66d52, #9e220a);
+  }
