@@ -1,33 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-
-<link rel="icon" href="templates/images/icon.png" type="image/png" sizes="64x64">
-
 <body>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <input type="text" id="message" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
 
-    
-    <img src="https://cdn.discordapp.com/attachments/1111353775375007765/1286420462322323577/photo_2022-05-10_23-12-42.jpg?ex=66edd7ea&is=66ec866a&hm=a145b1f75664ee78d4b83a7808a82cce3052ebe371a9e44f5f1aeb0fb7ea154c&" alt="Описание изображения" width="400" height="300">
-
-    <div>sello</div>
-
-    <form>
-        <p>down</p>
-        
-        <select>
-            
-            <option>да</option>
-            <option>нет<option>
-        </select>
-        <button>отправить</button>
-
-        
-    </form>
-<body>
-
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
