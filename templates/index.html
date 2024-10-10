@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        #chat {
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: #1e1e1e;
+            height: 400px;
+            overflow-y: scroll;
+        }
+        #message {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #333;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    <input id="message" type="text" placeholder="Type your message here...">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script>
+        var socket = io();
+        var chat = document.getElementById('chat');
+        var message = document.getElementById('message');
+
+        socket.on('message', function(msg) {
+            var p = document.createElement('p');
+            p.textContent = msg;
+            chat.appendChild(p);
+        });
+
+        message.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                socket.send(message.value);
+                message.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
