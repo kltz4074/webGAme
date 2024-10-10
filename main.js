@@ -15,3 +15,10 @@ function sendMessage() {
     socket.emit('message', { message, room });
     document.getElementById('message').value = '';
 }
+
+function sendMessage() {
+    const message = document.getElementById('message').value;
+    socket.emit('message', { message, room });
+    document.getElementById('message').value = '';
+}
+
